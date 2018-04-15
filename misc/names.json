@@ -1,28 +1,31 @@
 {
-    "male": [
-        "Peter",
-        "Rodney",
-        "Trevelyan",
-        "Patrick",
-        "Charlie",
-        "Luke",
-        "William",
-        "Sean",
-        "Callum",
-        "Alexander"
-    ],
-    "female": [
-        "Lorwenna",
-        "Olive",
-        "Hayley",
-        "Rita",
-        "Alexandra",
-        "Rhiannon",
-        "Laura",
-        "Chloe",
-        "Elizabeth",
-        "Ruth"
-    ],
+    "order": "western",
+    "given": {
+        "male": [
+            "Peter",
+            "Rodney",
+            "Trevelyan",
+            "Patrick",
+            "Charlie",
+            "Luke",
+            "William",
+            "Sean",
+            "Callum",
+            "Alexander"
+        ],
+        "female": [
+            "Lorwenna",
+            "Olive",
+            "Hayley",
+            "Rita",
+            "Alexandra",
+            "Rhiannon",
+            "Laura",
+            "Chloe",
+            "Elizabeth",
+            "Ruth"
+        ]
+    },
     "family": [
         "Stevens",
         "Smith",
