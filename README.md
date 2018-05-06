@@ -4,7 +4,7 @@
 
 ## Planned Functionality
 
-Initial this will be a CLI utility that:
+Initially this will be a CLI utility that:
 
 * Requires one arg: culture to generate name from
 * Has one optional arg: gender

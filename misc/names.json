@@ -1,46 +1,69 @@
 {
-    "order": "western",
-    "given": {
-        "male": [
-            "Peter",
-            "Rodney",
-            "Trevelyan",
-            "Patrick",
-            "Charlie",
-            "Luke",
-            "William",
-            "Sean",
-            "Callum",
-            "Alexander"
-        ],
-        "female": [
-            "Lorwenna",
-            "Olive",
-            "Hayley",
-            "Rita",
-            "Alexandra",
-            "Rhiannon",
-            "Laura",
-            "Chloe",
-            "Elizabeth",
-            "Ruth"
+    "british": {
+        "name": "British",
+        "order": "western",
+        "given": {
+            "male": [
+                "Peter",
+                "Rodney",
+                "Trevelyan",
+                "Patrick",
+                "Charlie",
+                "Luke",
+                "William",
+                "Sean",
+                "Callum",
+                "Alexander"
+            ],
+            "female": [
+                "Lorwenna",
+                "Olive",
+                "Hayley",
+                "Rita",
+                "Alexandra",
+                "Rhiannon",
+                "Laura",
+                "Chloe",
+                "Elizabeth",
+                "Ruth"
+            ]
+        },
+        "family": [
+            "Stevens",
+            "Smith",
+            "Alchimist",
+            "Fletcher",
+            "Tanner",
+            "Williamson",
+            "Stevenson",
+            "Trevithick",
+            "Pendragon",
+            "Stuart",
+            "Lancaster",
+            "Karling",
+            "von Hasberg",
+            "Tudor",
+            "Percy"
         ]
     },
-    "family": [
-        "Stevens",
-        "Smith",
-        "Alchimist",
-        "Fletcher",
-        "Tanner",
-        "Williamson",
-        "Stevenson",
-        "Trevithick",
-        "Pendragon",
-        "Stuart",
-        "Lancaster",
-        "Karling",
-        "von Hasberg",
-        "Tudor",
-        "Percy"
-    ]
+    "japanese": {
+        "name": "Japanese",
+        "order": "eastern",
+        "given": {
+            "male": [
+                "Shirou",
+                "Shinji",
+                "Mineta"
+            ],
+            "female": [
+                "Yuki",
+                "Rei"
+            ]
+        },
+        "family": [
+            "Minamoto",
+            "Oda",
+            "Takeda"
+        ]
+    }
 }

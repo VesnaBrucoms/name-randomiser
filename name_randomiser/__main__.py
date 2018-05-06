@@ -2,35 +2,35 @@
 import json
 import random
 
+from .culture import Culture
 
-def main(names_file_path, gender):
-    names_json = _read_file(names_file_path)
-    order = names_json['order']
-    given_names = names_json['given']
-    family_names = names_json['family']
 
-    full_name = {}
-    decide = random.randrange(0, 101)
-    if decide > 0 and decide < 75:
-        g_index = random.randrange(0, len(given_names[gender]))
-        f_index = random.randrange(0, len(family_names))
-        full_name = {
-            'given': given_names[gender][g_index],
-            'family': family_names[f_index]
-        }
-    else:
-        g_index = random.randrange(0, len(given_names[gender]))
-        m_index = random.randrange(0, len(given_names[gender]))
-        f_index = random.randrange(0, len(family_names))
-        full_name = {
-            'given': '{} {}'.format(given_names[gender][g_index], given_names[gender][m_index]),
-            'family': family_names[f_index]
-        }
+def main(culture_list, culture_name, gender=None):
+    chosen_culture = None
+    for culture in culture_list:
+        if culture.key == culture_name:
+            chosen_culture = culture
 
-    if order == "western":
-        print('{} {}'.format(full_name['given'], full_name['family']))
-    elif order == "eastern":
-        print('{} {}'.format(full_name['family'], full_name['given']))
+    # full_name = {}
+    # decide = random.randrange(0, 101)
+    # if decide > 0 and decide < 75:
+    #     g_index = random.randrange(0, len(chosen_culture[gender]))
+    #     f_index = random.randrange(0, len(chosen_culture['family']))
+    #     full_name = {
+    #         'given': chosen_culture[gender][g_index],
+    #         'family': chosen_culture['family'][f_index]
+    #     }
+    # else:
+    #     g_index = random.randrange(0, len(chosen_culture[gender]))
+    #     m_index = random.randrange(0, len(chosen_culture[gender]))
+    #     f_index = random.randrange(0, len(chosen_culture['family']))
+    #     full_name = {
+    #         'given': '{} {}'.format(chosen_culture[gender][g_index],
+    #                                 chosen_culture[gender][m_index]),
+    #         'family': chosen_culture['family'][f_index]
+    #     }
+
+    print(chosen_culture.get_name(gender))
 
 
 def _read_file(file_path):
@@ -41,5 +41,10 @@ def _read_file(file_path):
 
 
 if __name__ == '__main__':
-    main('./misc/names.json', 'male')
-    main('./misc/names.json', 'female')
+    names_json = _read_file('./misc/names.json')
+    cultures = []
+    for culture_key, culture_dict in names_json.items():
+        cultures.append(Culture(culture_key, culture_dict))
+    main(cultures, 'british', 'male')
+    main(cultures, 'british', 'female')
+    main(cultures, 'japanese', 'female')
