@@ -37,7 +37,10 @@ if __name__ == '__main__':
         culture_key = sys.argv[1]
         name_gender = sys.argv[2]
         main(culture_key, name_gender)
+    elif len(sys.argv) == 2:
+        culture_key = sys.argv[1]
+        main(culture_key)
     else:
         print('Invalid number of arguments.')
         print('Usage:')
-        print('name_randomiser culture_key gender')
+        print('\tname_randomiser culture_key gender')

@@ -44,6 +44,8 @@ class Culture():
         return self._order
 
     def get_name(self, gender):
+        if not gender:
+            gender = self._set_gender()
         g_index = random.randrange(0, len(self[gender]))
         f_index = random.randrange(0, len(self['family']))
         full_name = ''
@@ -53,3 +55,10 @@ class Culture():
             full_name = '{} {}'.format(self[gender][g_index], self['family'][f_index])
 
         return full_name
+
+    def _set_gender(self):
+        gender_rand = random.randrange(0, 100)
+        if gender_rand < 50:
+            return 'male'
+        else:
+            return 'female'
