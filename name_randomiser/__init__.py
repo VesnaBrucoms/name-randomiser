@@ -2,5 +2,5 @@
 
 APP_DETAILS = {
     'name': 'name-randomiser',
-    'version': '0.1.4'
+    'version': '0.2.0'
 }

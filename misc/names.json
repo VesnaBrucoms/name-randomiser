@@ -1,7 +1,7 @@
 {
     "british": {
         "name": "British",
-        "order": "western",
+        "order": "given",
         "given": {
             "male": [
                 "Peter",
@@ -48,7 +48,7 @@
     },
     "japanese": {
         "name": "Japanese",
-        "order": "eastern",
+        "order": "family",
         "given": {
             "male": [
                 "Shirou",
