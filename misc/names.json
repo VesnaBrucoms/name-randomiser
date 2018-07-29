@@ -65,5 +65,24 @@
             "Oda",
             "Takeda"
         ]
+    },
+    "spanish": {
+        "order": "given",
+        "given": {
+            "male": [
+                "Test 1",
+                "Test 2",
+                "Test 3"
+            ],
+            "female": [
+                "Test 1",
+                "Test 2"
+            ]
+        },
+        "family": [
+            "Testing 1",
+            "Testing 2",
+            "Testing 3"
+        ]
     }
 }

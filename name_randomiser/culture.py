@@ -4,6 +4,10 @@ import random
 
 class Culture():
 
+    gender_min = 0
+    gender_max = 100
+    gender_split = 50
+
     def __init__(self, key, culture_dict):
         self._key = key
         self._culture_name = culture_dict.get('name', key)
@@ -26,7 +30,8 @@ class Culture():
                           len(self._family_names))
 
     def __repr__(self):
-        return '<{} {}: {}>'.format(__name__, self._key, self._culture_name)
+        msg = '<{} {}: {}>'
+        return msg.format(__name__, self._key, self._culture_name)
 
     @property
     def key(self):
@@ -46,19 +51,25 @@ class Culture():
     def get_name(self, gender):
         if not gender:
             gender = self._set_gender()
-        g_index = random.randrange(0, len(self[gender]))
-        f_index = random.randrange(0, len(self['family']))
-        full_name = ''
+        given = self._get_given_name(gender)
+        family = self._get_family_name()
+        full_name = '{} {}'
         if self._order == 'family':
-            full_name = '{} {}'.format(self['family'][f_index], self[gender][g_index])
+            full_name = full_name.format(family, given)
         else:
-            full_name = '{} {}'.format(self[gender][g_index], self['family'][f_index])
+            full_name = full_name.format(given, family)
 
         return full_name
 
     def _set_gender(self):
-        gender_rand = random.randrange(0, 100)
-        if gender_rand < 50:
+        gender_rand = random.randrange(self.gender_min, self.gender_max)
+        if gender_rand < self.gender_split:
             return 'male'
         else:
             return 'female'
+
+    def _get_given_name(self, gender):
+        return random.choice(self[gender])
+
+    def _get_family_name(self):
+        return random.choice(self['family'])
